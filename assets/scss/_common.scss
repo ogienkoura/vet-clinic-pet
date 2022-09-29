@@ -1,0 +1,256 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  background-color: $color-gray;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(/assets/img/background-dog-header.png);
+  background-size: cover;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+[class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row::after,
+.menu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* grid xs */
+.col-xs-1 {
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%;
+}
+
+.col-xs-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .col-sm-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .col-sm-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .col-sm-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .col-sm-6 {
+    flex: 0 0 49.99998%;
+    max-width: 49.99998%;
+  }
+
+  .col-sm-7 {
+    flex: 0 0 58.33331%;
+    max-width: 58.33331%;
+  }
+
+  .col-sm-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .col-sm-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+
+  .hidden-sm {
+    display: none;
+  }
+}
+
+/* laptop */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .col-md-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .col-md-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+
+  .col-md-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+
+  .col-md-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+.header-menu {
+  height: 150px;
+  padding: 51px 0;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $color-light;
+  height: 50px;
+  font-weight: 600;
+  font-size: 30px;
+  & img {
+    padding-right: 16px;
+  }
+}
+
+.header__menu {
+  display: flex;
+  justify-content: right;
+  &-item {
+    list-style: none;
+    margin-right: 21px;
+    & a {
+      position: relative;
+      text-decoration: none;
+      color: $color-light;
+    }
+  }
+  &-item a::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $color-light;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    transform-origin: right;
+  }
+  &-item a:hover::before {
+    transform: scaleX(1);
+    transition: transform 0.25s;
+    transform-origin: left;
+  }
+
+  &-item:last-child {
+    margin-right: 0;
+  }
+}
+
+.header-content {
+  margin-top: 200px;
+  &__title {
+    color: $color-light;
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 60px;
+    margin-bottom: 25px;
+  }
+  &__desc {
+    color: $color-light;
+    line-height: 23px;
+    margin-bottom: 50px;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 62px;
+  width: 223px;
+  height: 60px;
+  text-decoration: none;
+}
+
+.btn--light {
+  position: relative;
+  background-color: $color-light;
+  font-size: 17px;
+  border: 1px solid $color-light;
+  color: $color-black;
+}
+
+.btn--light:hover {
+  z-index: 1;
+  color: $color-light;
+  transition: 0.5s;
+}
+
+.btn--light::before {
+  content: "";
+  width: 100%;
+  height: 60px;
+  background-color: $color-black;
+  border: 1px solid $color-light;
+  position: absolute;
+  left: -1;
+  transform: scaleX(0);
+  transition: transform 0.35s;
+  transform-origin: right;
+}
+
+.btn--light:hover::before {
+  transform: scaleX(1);
+  transition: transform 0.35s;
+  transform-origin: left;
+  z-index: -1;
+}
