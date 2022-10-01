@@ -262,10 +262,6 @@ header {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    &-title {
-      font-weight: 600;
-      font-size: 2.5rem;
-    }
     &-text {
       line-height: 23px;
     }
@@ -282,14 +278,13 @@ header {
   &__title {
     width: 100%;
     margin-top: 200px;
-    font-weight: 600;
-    font-size: 2.5rem;
   }
   &__blocks {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 200px;
     &-item {
       margin-right: 20px;
       & h3 {
@@ -303,5 +298,16 @@ header {
     &-item:last-child {
       margin-right: 0;
     }
+  }
+}
+
+.about {
+  &__image {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__desc {
+    margin-top: 0;
+    line-height: 23px;
   }
 }
