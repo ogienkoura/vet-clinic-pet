@@ -304,3 +304,29 @@ header {
     mix-blend-mode: darken;
   }
 }
+
+.specialists {
+  &__title {
+    margin-top: 200px;
+  }
+}
+
+.splide {
+  margin-top: 20px;
+  &__slide {
+    &-photo {
+      width: 100%;
+    }
+    &-title {
+      margin-top: 20px;
+    }
+  }
+  &__arrows {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__arrow {
+    position: static;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}

@@ -11,8 +11,13 @@
 
   <!-- Подключаем иконочный шрифт fontawesome -->
   <link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <!-- SplideJS -->
+  <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
+
   <!-- Подключаем наш основной стиль, с которым будем работать -->
   <link rel="stylesheet" href="assets/css/style.css">
+
   <title>RED-FOX</title>
 </head>
 
@@ -251,6 +256,60 @@
         </div>
       </div>
     </section>
+
+    <section class="specialists">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="specialists__title">Наши специалисты</h2>
+          </div>
+          <div class="col-xs-12">
+            <section class="splide">
+
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <img src="assets/img/arrow-left.svg" alt="">
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <img src="assets/img/arrow-right.svg" alt="">
+                </button>
+              </div>
+
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img class="splide__slide-photo" src="assets/img/specialist01.jpg" alt="">
+                    <h3 class="splide__slide-title">Анна Гуменюк</h3>
+                    <p>Терапевт общей практики</p>
+                  </li>
+                  <li class="splide__slide">
+                    <img class="splide__slide-photo" src="assets/img/specialist02.jpg" alt="">
+                    <h3 class="splide__slide-title">Денис Шевченко</h3>
+                    <p>Ведущий хирург</p>
+                  </li>
+                  <li class="splide__slide">
+                    <img class="splide__slide-photo" src="assets/img/specialist03.jpg" alt="">
+                    <h3 class="splide__slide-title">Валерия Дорох</h3>
+                    <p>Стоматолог</p>
+                  </li>
+                  <li class="splide__slide">
+                    <img class="splide__slide-photo" src="assets/img/specialist03.jpg" alt="">
+                    <h3 class="splide__slide-title">Валерия Дорох</h3>
+                    <p>Стоматолог</p>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
   </main>
 
 
@@ -263,6 +322,10 @@
 
   <!-- Подключаем библиотеку jquery, необходимую для работы нашего основного скрипта -->
   <script src="libs/jquery/dist/jquery.min.js"></script>
+
+  <!-- SplideJS -->
+  <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+
   <!-- Подключаем наш основной скрипт, с которым будем работать -->
   <script src="assets/js/main.js"></script>
 
