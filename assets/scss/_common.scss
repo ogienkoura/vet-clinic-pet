@@ -224,6 +224,12 @@ header {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    &-text {
+      margin-top: 40px;
+      &-two {
+        margin-top: 30px;
+      }
+    }
   }
 
   &__image {
@@ -246,8 +252,12 @@ header {
     margin-bottom: 200px;
     &-item {
       margin-right: 20px;
+      & h3 {
+        margin-top: 40px;
+      }
       & p {
         color: $color-black;
+        margin-top: 10px;
       }
     }
     &-item:last-child {
@@ -286,6 +296,10 @@ header {
   flex-direction: column;
   height: 100%;
   justify-content: center;
+  &-desc {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
 }
 
 .banner {
@@ -325,6 +339,9 @@ header {
     }
     &-title {
       margin-top: 20px;
+    }
+    &-profession {
+      margin-top: 10px;
     }
   }
   &__arrows {
@@ -366,18 +383,20 @@ header {
       height: 1px;
       background-color: $color-black;
       position: absolute;
-      top: 29px;
+      top: 31px;
       left: -60px;
     }
     &-name {
       overflow: hidden;
       text-overflow: ellipsis;
+      margin-top: 20px;
     }
     &-animal {
       font-size: 14px;
       color: $color-gray;
       overflow: hidden;
       text-overflow: ellipsis;
+      margin-top: 10px;
     }
   }
   &__text {
@@ -395,6 +414,7 @@ header {
 .arrows2 {
   justify-content: center;
   margin-right: 245px;
+  margin-top: 20px;
 }
 
 .blog {
@@ -418,6 +438,10 @@ header {
     color: $color-black;
     font-weight: 600;
   }
+  &__desc {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
   &__link::before {
     content: "";
     width: 100%;
@@ -434,5 +458,117 @@ header {
     transform: scaleX(1);
     transition: transform 0.25s;
     transform-origin: left;
+  }
+}
+
+.contacts {
+  background-color: $color-black;
+  & h3 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    opacity: 1;
+    color: $color-light;
+    line-height: 30px;
+  }
+  &__form {
+    margin-bottom: 80px;
+    &-item {
+      width: 420px;
+      height: 40px;
+      margin-bottom: 20px;
+      &-input {
+        width: 100%;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        border-bottom: 1px solid $color-gray;
+      }
+      &-input::placeholder {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-gray;
+      }
+      &-input:focus::placeholder {
+        transition: 0.5s;
+        color: $color-light;
+      }
+
+      &-input:focus {
+        outline: none;
+        color: $color-light;
+        border-bottom: 1px solid $color-light;
+        transition: 0.5s;
+      }
+    }
+
+    & .checkbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      margin-top: 40px;
+      & label {
+        font-size: 0.875rem;
+        color: $color-gray;
+        & span {
+          position: absolute;
+          margin-left: 10px;
+          margin-top: 1px;
+        }
+        & a {
+          color: white;
+          font-size: 0.875rem;
+          text-decoration: none;
+          position: relative;
+        }
+        & a::before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background-color: white;
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+        }
+      }
+      & input {
+        display: none;
+      }
+      & label::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $color-gray;
+        cursor: pointer;
+      }
+      & input[type="checkbox"]:checked + label::before {
+        background-image: url("../img/apply-form.svg");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+      }
+    }
+  }
+  &__block {
+    display: flex;
+    &-adress,
+    &-social {
+      width: 50%;
+      &-title {
+        margin: 0;
+        color: $color-light;
+        font-weight: 600;
+      }
+      & p {
+        color: $color-gray;
+        margin-top: 6px;
+      }
+    }
+    &-info,
+    &-list {
+      margin-top: 25px;
+    }
   }
 }

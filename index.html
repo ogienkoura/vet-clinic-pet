@@ -85,7 +85,8 @@
               <p class="our-mission__desc-text">Домашний питомец при сознательном к нему отношении становится настоящим
                 членом
                 семьи.</p>
-              <p class="our-mission__desc-text">Наша задача — обеспечить владельцам советы и экспертные консультации по
+              <p class="our-mission__desc-text-two">Наша задача — обеспечить владельцам советы и экспертные консультации
+                по
                 уходу
                 и
                 содержанию на таком уровне, чтобы качество жизни животного было таким же высоким, как у всех членов
@@ -280,22 +281,22 @@
                   <li class="splide__slide">
                     <img class="splide__slide-photo" src="assets/img/specialist01.jpg" alt="">
                     <h3 class="splide__slide-title">Анна Гуменюк</h3>
-                    <p>Терапевт общей практики</p>
+                    <p class="splide__slide-profession">Терапевт общей практики</p>
                   </li>
                   <li class="splide__slide">
                     <img class="splide__slide-photo" src="assets/img/specialist02.jpg" alt="">
                     <h3 class="splide__slide-title">Денис Шевченко</h3>
-                    <p>Ведущий хирург</p>
+                    <p class="splide__slide-profession">Ведущий хирург</p>
                   </li>
                   <li class="splide__slide">
                     <img class="splide__slide-photo" src="assets/img/specialist03.jpg" alt="">
                     <h3 class="splide__slide-title">Валерия Дорох</h3>
-                    <p>Стоматолог</p>
+                    <p class="splide__slide-profession">Стоматолог</p>
                   </li>
                   <li class="splide__slide">
                     <img class="splide__slide-photo" src="assets/img/specialist04.webp" alt="">
                     <h3 class="splide__slide-title">Сергей Рябцов</h3>
-                    <p>Стоматолог</p>
+                    <p class="splide__slide-profession">Стоматолог</p>
                   </li>
                 </ul>
               </div>
@@ -396,13 +397,63 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <section class="contacts">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">Footer</div>
+
+          <div class="col-sm-6">
+            <h3>Записаться на прием</h3>
+            <form class="contacts__form" action="#">
+              <div class="contacts__form-item">
+                <input class="contacts__form-item-input" type="text" placeholder="Имя">
+              </div>
+              <div class="contacts__form-item">
+                <input class="contacts__form-item-input" type="text" placeholder="Имя питомца">
+              </div>
+              <div class="contacts__form-item">
+                <input class="contacts__form-item-input" type="text" placeholder="Номер телефона">
+              </div>
+              <div class="contacts__form-item checkbox">
+                <input type="checkbox" id="personal">
+                <label for="personal"><span>Даю согласие на обработку <a href="#">Персональных данных</a></span>
+                </label>
+              </div>
+              <div class="form__item">
+                <button class="btn btn--light" type="submit">Записаться</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-sm-6">
+            <h3>Контакты</h3>
+            <div class="contacts__block">
+
+              <div class="contacts__block-adress">
+                <h4 class="contacts__block-adress-title">Адрес</h4>
+                <div class="contacts__block-info">
+                  <p class="contacts__block-adress-city">г. Одесса, Украина</p>
+                  <p class="contacts__block-adress-street">ул. Варненская, 20</p>
+                  <p class="contacts__block-adress-phone">+38 048 222 55 66</p>
+                </div>
+              </div>
+
+              <div class="contacts__block-social">
+                <h4 class="contacts__block-social-title">Социальные сети</h4>
+                <div class="contacts__block-list">
+                  <p>Facebook</p>
+                  <p>Twitter</p>
+                  <p>Instagram</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </footer>
+    </section>
+
+
 
 
   </main>
