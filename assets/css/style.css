@@ -932,6 +932,74 @@ header {
   margin-top: 25px;
 }
 
+.footer {
+  background-color: #282828;
+}
+.footer__block {
+  border-top: 1px solid #ffffff;
+}
+.footer__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 80px;
+}
+.footer__contacts-link {
+  margin-left: 20px;
+  position: relative;
+}
+.footer__contacts-link:first-child {
+  margin-left: 0;
+}
+.footer__contacts-link a {
+  color: #909090;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer__contacts-link::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+}
+.footer__contacts-link:hover::before {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+}
+.footer__contacts-link a:hover {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: #ffffff;
+}
+
 h2 {
   font-weight: 600;
   font-size: 2.5rem;

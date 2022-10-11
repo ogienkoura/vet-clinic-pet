@@ -572,3 +572,52 @@ header {
     }
   }
 }
+
+.footer {
+  background-color: $color-black;
+  &__block {
+    border-top: 1px solid $color-light;
+  }
+  &__contacts {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 80px;
+
+    &-link {
+      margin-left: 20px;
+      position: relative;
+    }
+    &-link:first-child {
+      margin-left: 0;
+    }
+    &-link a {
+      color: $color-gray;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &-link::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $color-light;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transform: scaleX(0);
+      transition: transform 0.25s;
+      transform-origin: right;
+    }
+    &-link:hover::before {
+      transform: scaleX(1);
+      transition: transform 0.25s;
+      transform-origin: left;
+    }
+    &-link a:hover {
+      transition: 0.5s;
+      color: $color-light;
+    }
+  }
+}
