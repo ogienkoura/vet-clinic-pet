@@ -338,7 +338,7 @@ body {
 
 header {
   min-height: 900px;
-  background-image: url(/assets/img/background-dog-header.png);
+  background-image: url(../../assets/img/background-dog-header.png);
   background-size: cover;
 }
 
